@@ -29,10 +29,4 @@ cookbook_file "/usr/sbin/gravity-backup.sh" do
   group "root"
 end
 
-
-cron "gravity-backup" do
-  hour "4"
-  minute "0"
-  weekday "0"
-  command "/usr/sbin/gravity-backup.sh -a"
-end
+include_recipe "gravity-backup::cron"
