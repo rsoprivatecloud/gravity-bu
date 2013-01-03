@@ -22,8 +22,8 @@ template "/etc/default/gravity-backup.conf" do
   })
 end
 
-cookbook_file "/usr/sbin/gravity-backup.sh" do
-  source "gravity-backup.sh"
+remote_file "/usr/sbin/gravity-backup.sh" do
+  source "https://raw.github.com/rsoprivatecloud/gravity-backup/master/gravity-backup.sh"
   mode 0755
   owner "root"
   group "root"
