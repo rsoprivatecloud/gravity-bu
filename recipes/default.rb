@@ -31,8 +31,8 @@ end
 
 
 cron "gravity-backup" do
-  hour "23"
+  hour "4"
   minute "0"
-#  weekday "0"
+  weekday "0"
   command "/usr/sbin/gravity-backup.sh -a"
 end
