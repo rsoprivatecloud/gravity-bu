@@ -6,6 +6,7 @@ default["gravitybackup"] = {
   "backupdir" => "/var/chef-backup",
   "corenum" => "4",
   "vcorenum" => "2",
+  "budays" => "31",
   "cron" => {
     "minute" => "0",
     "hour" => "4",

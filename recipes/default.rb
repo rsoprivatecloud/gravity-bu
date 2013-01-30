@@ -18,7 +18,8 @@ template "/etc/default/gravity-backup.conf" do
     :vmxmlloc => node[:gravitybackup][:vmxmlloc],
     :backupdir => node[:gravitybackup][:backupdir],
     :corenum => node[:gravitybackup][:corenum],
-    :vcorenum => node[:gravitybackup][:vcorenum]
+    :vcorenum => node[:gravitybackup][:vcorenum],
+    :budays => node[:gravitybackup][:budays]
   })
 end
 
@@ -29,4 +30,4 @@ remote_file "/usr/sbin/gravity-backup.sh" do
   group "root"
 end
 
-include_recipe "gravity-backup::cron"
+include_recipe "gravity-bu::cron"
